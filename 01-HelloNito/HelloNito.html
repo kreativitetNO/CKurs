@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+    <div id="tekst"></div>
+    <button id="knapp" type="button">Klikk meg</button>
+    <script>
+        var tekst = document.querySelector("#tekst")
+        var knapp = document.querySelector("#knapp")
+        if (tekst != null && knapp != null) {
+            knapp.addEventListener("click", (ev) => {
+                tekst.innerHTML = "Hello, Nito!"
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Kopier fra forrige versjon.

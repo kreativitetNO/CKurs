@@ -1,0 +1,124 @@
+Hvordan fungerer en datamaskin?
+- Flytter rundt og manipulerer 0-ere og 1-ere
+
+0 og 1 kan representere 2 tilstander. Hvordan jobber vi med større tall enn 1?
+- Ved å gruppere flere bits
+
+Gruppe  Tilstand
+0       0
+1       1
+
+Gruppe Tilstand
+00     0
+01     1
+10     2
+11     3
+
+Gruppe Tilstand
+000    0
+001    1
+010    2
+011    3
+100    4
+101    5
+110    6
+111    7
+
+Gruppe Tilstand Alternativt
+0000   0        0
+0001   1        1
+0010   2        2
+0011   3        3
+0100   4        4
+0101   5        5
+0110   6        6
+0111   7        7
+1000   8        8
+1001   9        9
+1010   10       A
+1011   11       B
+1100   12       C
+1101   13       D
+1110   14       E
+1111   15       F
+
+Maskinkode:
+- Veldig upraktisk å jobbe med
+
+Assembly kode:
+(Assembly Language - https://en.wikipedia.org/wiki/Assembly_language)
+- Litt lettere å tyde og skrive enn maskinkode
+- Ca 1 til 1 forhold med maskinkode
+- Fortsatt veldig upraktisk
+- Spesifikt til hver type datamaskin vi vil kjøre kode på
+
+Løsning: Høynivå språk
+(High-level Programing Language ref: https://en.wikipedia.org/wiki/High-level_programming_language)
+
+Eksempler:
+- Python - Lett å lære - men lite fleksibelt og tregt - krever en runtime
+- JavaScript - Litt ulikt andre språk, kan kjøre i nettleser
+
+Disse 2 trenger ingen kompilering (som vi brukere ser i hvert fall). Resten av listen krever kompilering.
+
+- Java - Litt raskere enn Python - mer komplekst men krever Java Virtual Machine
+- C# - Litt raskere enn Java i Windows - men krever .net Runtime
+
+Disse trenger kompilering (oversetting) til en mellomkode som er "portabel", men må kjøres gjennom en runtime og er derfor tregere enn...
+
+- C++
+- C
+
+Disse trenger kompilering, men kompileres til kode som kan kjøres direkte av datamaskinen og er raske. De må dog kompileres til den maskinen de skal kjøres på (fordi maskinkoden kan være annerledes)
+
+MEN: dårlig kode er tregt uansett språk...god Python kode kan være mye raskere enn dårlig C kode!
+
+Python på BBC MicroBit - var plass igjen til 1000 tall selv med verdens enkleste program
+Java - 100Mbyte ca - ikke sikkert du har plass til det på en mikrokontroller
+
+Jo "enklere" språk - jo mer overhead og mindre 
+
+Eksempel:
+
+Python kode ---> Python Runtime (skrevet i C) hver gang ---> Programmet kjører (sakte)
+C kode ---> Kompileres 1 gang ---> Kan kjøres så ofte vi vil uten rekompilering
+
+Nyttige linker og informasjon:
+Git med kode fra i dag: https://github.com/kreativitetNO/CKurs
+
+Hvorfor lære C istedenfor mer "fancy" C++?
+
+Selv om C er fra tidlig 1970 (med et par småoppdateringer i 1990, 1995, 1999, 2011) brukes det fortsatt til å lage gode applikasjoner, drivere, operativsystemer osv. Python runtime er laget i C.
+
+C++ "bibelen" er på ca 1376 sider (og dekker ikke C++14, C++17 og C++20). C "bibelen" er 272 sider.
+
+C++ bibelen: https://www.amazon.com/C-Programming-Language-4th/dp/0321563840
+C bibelen: https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628
+
+Satt på spissen: C kan læres på timer - C++ på år.
+
+C er en god inngang til videre læring av C++. Mange konsepter i C bygges videre på i C++.
+
+Til slutt: C er det nærmeste assembly du kommer uten å skrive assembly. Derfor har du høy grad av kontroll, men med langt mindre kompleksitet enn assembly.
+
+Verktøy:
+- Trenger bare en tekst-editor og en kompilator som gcc
+- Anbefaler en ordentlig IDE - men fortsatt en god idé å gjøre ting manuelt først så du skjønner hva IDEen automatiserer. Ikke sikkert du kan bruke automatiske verktøy på alle platformer i alle situasjoner. Ctrl-Shift-B er "for lett".
+
+Editors/IDEer:
+- Mac - XCode, Visual Studio Code
+- Linux - vim, QtCreator, Visual Studio Code
+- Windows - Visual Studio Community, QtCreator, Visual Studio Code
+
+Kompilere:
+- Mac - GCC (tror jeg)
+- Linux - GCC
+- Windows - Visual C++ (cl), MinGW-64 (OBS! Ikke den gamle MinGW som ikke utvikles lenger)
+
+Google is your friend:
+- "How can I write and compile C on a mac"
+- "How to install GCC in Ubuntu (eller annen Linux distro)"
+- "How to compile C on the command line in Windows"
+
+For i dag:
+- https://repl.it/

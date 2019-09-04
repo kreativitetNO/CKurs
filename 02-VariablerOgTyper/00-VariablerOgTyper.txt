@@ -1,0 +1,63 @@
+En variabel holder av plass i minnet til en verdi som vi kan bruke i uttrykk og andre steder. Typen sier noe om hvordan vi tolker verdien i minnet.
+
+"God gammeldags" Standard C har "bare" følgende datatyper:
+(ref: https://en.wikipedia.org/wiki/C_data_types)
+char
+signed char
+unsigned char
+short
+short int
+signed short
+signed short int
+unsigned short
+unsigned short int
+int
+signed
+signed int
+unsigned
+unsigned int
+long
+long int
+signed long
+signed long int
+unsigned long
+unsigned long int
+long long
+long long int
+signed long long
+signed long long int
+unsigned long long
+unsigned long long int
+float
+double
+long double
+(bool)
+
+Og: "The relation requirements are that the long long is not smaller than long, which is not smaller than int, which is not smaller than short. As char's size is always the minimum supported data type..."
+
+(PUH!)
+
+Enklere å tenke sånn:
+char er minst og er minimum 8 bits
+short og int er minimum 16 bits
+long er minimum 32 bits
+long long er minimum 64 bits
+
+En float er det minste flyttallet (med minst presisjon).
+En double er litt større (og mer presis).
+En long double er størst (og enda mer presist)
+
+Siden dette er et 3-timers kurs, nøyer vi oss stort sett med char, int og double.
+
+Tips:
+Limits.h inneholder maks og min verdiene for de forskjellige typene:
+https://en.cppreference.com/w/c/types/limits
+
+Forskjellige datamaskiner kan ha forskjellige størrelser på de forskjellige typene. Hvis du vil være helt sikker på størrelsen på en variabel, bruk stdint.h:
+https://en.cppreference.com/w/c/types/integer
+
+Komplisert:
+https://www.oreilly.com/library/view/c-in-a/0596006977/ch04.html
+
+
+
