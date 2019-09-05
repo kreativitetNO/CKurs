@@ -120,5 +120,10 @@ Google is your friend:
 - "How to install GCC in Ubuntu (eller annen Linux distro)"
 - "How to compile C on the command line in Windows"
 
+Morsomme linker:
+- http://unixwiz.net/techtips/reading-cdecl.html
+- http://cppreference.com/
+- https://github.com/kreativitetNO/CKurs/
+
 For i dag:
 - https://repl.it/
